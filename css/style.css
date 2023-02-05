@@ -516,13 +516,14 @@ header {
 
 .member-card {
   display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(300px));
+  grid-template-columns: repeat(auto-fit, minmax(200px));
   grid-gap: 20px;
   justify-content: center;
+  
 }
 
 .member-container {
-  width: 100%;
+  width: 200px;
 }
 
 
