@@ -1,0 +1,295 @@
+<div class="top-banner">
+                <!--image slider start-->
+                <div class="slider">
+                    <div class="slides">
+                    <!--radio buttons start-->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                    <!--radio buttons end-->
+                    <!--slide images start-->
+                        <div class="slide first">
+                            <img src="./multimedia/image/main-banner2.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="./multimedia/image/main-banner3.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="./multimedia/image/main-banner4.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="./multimedia/image/main-banner1.jpg" alt="">
+                        </div>
+                        <!--slide images end-->
+          
+                        <!--automatic navigation start-->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                          </div>
+                          <!--automatic navigation end-->
+                    </div>
+                    <!--manual navigation start-->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                      </div>
+                      <!--manual navigation end-->
+                </div>
+                <!--image slider end-->
+            </div>
+
+
+
+
+<----------------------------------------------------------------------------------------------------------------->
+
+<button class="banner-btn banner-btn-left"><-</button>
+            <div class="banner-track-container">
+                <ul class="banner-track">
+                    <li class="banner-slide current-slide">
+                        <img class="banner-image" src="./multimedia/image/main-banner1.jpg" alt="">
+                    </li>
+                    <li class="banner-slide">
+                        <img class="banner-image" src="./multimedia/image/main-banner2.jpg" alt="">
+                    </li>
+                    <li class="banner-slide">
+                        <img class="banner-image" src="./multimedia/image/main-banner3.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <button class="banner-btn banner-btn-right">-></button>
+
+            <div class="banner-nav-indicator">
+                <button class="banner-indicator current-slide"></button>
+                <button class="banner-indicator"></button>
+                <button class="banner-indicator"></button>
+            </div>
+
+<----------------------------------------------------------------------------------------------------------------->
+
+.banner {
+  position: relative;
+  height: 600px;
+  width: 80%;
+  margin: 0  auto;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-track-container {
+  background: lightblue;
+
+  height: 100%;
+}
+
+.banner-track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.banner-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.banner-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  cursor: pointer;
+}
+
+.banner-btn-left {
+  left: -50px;
+}
+
+.banner-btn-right {
+  right: -50px;
+}
+
+.banner-nav-indicator {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  
+}
+
+.banner-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(164, 0, 0, 3);
+  margin: 0 10px;
+}
+
+.banner-indicator .current-slide {
+  background-color: rgba(0, 0, 164, 20);
+}
+
+<----------------------------------------------------------------------------------------------------------------->
+
+
+const track = document.querySelector('.banner-track');
+const slide = Array.from(track.children);
+const nextButton = document.querySelector('.banner-btn-right');
+const prevButton = document.querySelector('.banner-btn-left');
+const dotsNavs = document.querySelector('.banner-nav-indicator')
+const dots = Array.from(dotsNavs.children);
+
+const slideSize = slide[0].getBoundingClientRect();
+const slideWidth = slideSize.width;
+// console.log(slideWidth)
+
+
+const setSlidePosition = (slide, index) =>{
+    slide.style.left = slideWidth * index + 'px';
+}
+
+
+slide.forEach(setSlidePosition);
+
+// when i click left, move slide to the left
+
+
+
+// when i click right, move slide to the right
+nextButton.addEventListener('click', e =>{
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = (currentSlide.nextElementSibling);
+
+    const amountToMove = nextSlide.style.left;
+
+    track.style.transform = 'translateX('
+}); 
+
+
+// when i click the nav indicator, move to the that slide
+
+
+<header> 
+        <nav>
+            <div class="nav-logo">
+                <a href="#"><img src="./multimedia/image/sh-logo-white.png" alt="" class="nav-logo-imm"></a>
+            </div>
+            <ul>
+                <li class="btn">
+                    <div class="fas fa-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="link"><a href="">news</a></li>
+                <li class="link"><a href="">store</a></li>
+                <li class="link"><a href="">crew</a></li>
+                <li class="link"><a href="">event</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="hero">
+
+
+        <div class="banner">
+            <section class="container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="slide-1" src="./multimedia/image/main-banner2.jpg" alt="" />
+                        <img id="slide-2" src="./multimedia/image/main-banner3.jpg" alt="" />
+                        <img id="slide-3" src="./multimedia/image/main-banner4.jpg" alt="" />
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#slide-1"></a>
+                        <a href="#slide-2"></a>
+                        <a href="#slide-3"></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="main-content">
+            <div class="main-content-images">
+                <img src="./multimedia/image/main-banner1.jpg" alt="">
+            </div>
+            <div class="intro-text">
+                <p>CS Speed is an itasha artist who made the art with heart</p>
+            </div>
+        </div>  
+
+
+        <div class="works">
+            <div class="works-content">
+                <img src="./multimedia/image/bg.jpg" alt="">
+                <div class="works-text">
+                    <p>Project terbaru dari CS-Speed Company yaitu itaha di sebuah mclaren 720s gt3</p>
+                </div>
+                <button class="works-btn">
+                    preview
+                </button>
+            </div>
+            <div class="works-content">
+                <img src="./multimedia/image/bg.jpg" alt="">
+                <div class="works-text">
+                    <p>Project terbaru dari CS-Speed Company yaitu itaha di sebuah mclaren 720s gt3</p>
+                </div>
+                <button class="works-btn">
+                    preview
+                </button>
+            </div>
+            <div class="works-content">
+                <img src="./multimedia/image/bg.jpg" alt="">
+                <div class="works-text">
+                    <p>Project terbaru dari CS-Speed Company yaitu itaha di sebuah mclaren 720s gt3</p>
+                </div>
+                <button class="works-btn">
+                    preview
+                </button>
+            </div>
+            <div class="works-content">
+                <img src="./multimedia/image/bg.jpg" alt="">
+                <div class="works-text">
+                    <p>Project terbaru dari CS-Speed Company yaitu itaha di sebuah mclaren 720s gt3</p>
+                </div>
+                <button class="works-btn">
+                    preview
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="/multimedia/image/sh-logo-white.png" alt="">
+            </div>
+            <div class="footer-text">
+                <div class="about">
+
+                </div>
+                <div class="socials">
+                    
+                </div>
+                <div class="credit">
+                    &#169;CSpeed
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <----------------------------------------------------------------------------------------------------------------->

@@ -1,0 +1,149 @@
+HTML :
+
+        <div class="gallery-box">
+            <div class="g-box-header">
+              <h1>2023 TEST SESSION</h1>
+            </div>
+            <div class="g-box-inner">
+              <p>first testing of the year  performed in spa-francorchamps circuit</p>
+              <div class="thumbnail-container">
+                <div class="thumbnail">
+                  <div class="thumbnail-images">
+                    <img src="../multimedia/images/gallery-thumbnail/720s (1).jpg" alt="">
+                    <img src="../multimedia/images/gallery-thumbnail/720s (2).jpg" alt="">
+                    <img src="../multimedia/images/gallery-thumbnail/720s (3).jpg" alt="">
+                    <a href="../pages/more-gallery1.html">
+                      <button class="thumbnail-button">show more</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+CSS :
+
+
+.gallery-box {
+  width: 90%;
+  margin: auto;
+  
+}
+
+.g-box-header {
+  position: relative;
+  top: 25px;
+  left: 15%;
+  width: 70%;
+  z-index: 1;
+
+  clip-path: polygon(5% 0, 100% 0, 100% 50%, 95% 100%, 0 100%, 0 50%);
+  background-color: #e40080;
+  
+}
+
+.g-box-header h1 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+
+}
+
+.g-box-inner {
+  position: relative;
+  padding-top: 2%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #2c2c2c;
+
+}
+
+.g-box-inner p {
+  padding: 20px;
+}
+
+.thumbnail-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  
+  transition: 1s;
+}
+
+.thumbnail-images {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  filter: grayscale() ;
+  transition: 1s;
+}
+
+.thumbnail-images:hover {
+  filter: none;
+}
+
+.thumbnail-images img{
+  min-width: 0;
+  flex: 1 1 10px;
+  object-fit: cover;
+  transition: 0.8s;
+  filter: blur(1px);
+}
+
+.thumbnail-images img:hover {
+  filter: none;
+  flex: 1 1 300px;
+
+}
+
+.thumbnail-btn-container {
+  display: flex;
+;
+}
+
+.thumbnail-btn-container:hover {
+  border: solid 2px #e40080;
+}
+
+.thumbnail-button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  mix-blend-mode: screen;
+
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: .3s;
+  backdrop-filter: grayscale();
+
+  background-color: #fff;
+  color: #000000;
+}
+
+.thumbnail-button:hover {
+  mix-blend-mode: normal;
+  background-color: #e40080;
+  border: none;
+  color: #fff;
+}
