@@ -1,21 +1,6 @@
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
+const navToggle = document.querySelector('.nav-toggle input');
+const nav = document.querySelector('.navbar-bottom');
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+navToggle.addEventListener('click', function() {
+  nav.classList.toggle('slide');
 });

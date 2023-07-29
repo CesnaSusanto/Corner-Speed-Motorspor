@@ -6,65 +6,115 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'poppins';
-    border: solid  1 px red;
+    border: solid  1px red;
 
 }
 
-.corporate-sponsor-page {
-  max-width: 1600px;
-  width: 90%;
-  margin: auto;;
+footer {
+  border-top: solid 2px #fff;
+  filter: drop-shadow(0px 5px 10px #fff);
 }
 
-.cs-head-title {
-  width: 50%;
-  margin: auto;
-  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 60%, 90% 100%, 0 100%, 0 40%);
-  clip-path: polygon(10% 0, 100% 0, 100% 60%, 90% 100%, 0 100%, 0 40%);
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  background-color: #2c2c2c;
+
 }
 
-.cs-head-title h2 {
-  text-align: center;
-  font-size: 3em;
-  text-transform: uppercase;
-  background-color: #e40080;
-  padding: 5px;
-}
-
-.cs-page-container {
+.footer-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.cs-page-logo {
-  display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-}
-
-.cs-logo-wrapper a{
-  color: #fff;
-  text-decoration: none;
+  width: 90%;
+  height: 100%;
   text-transform: uppercase;
-  padding: 0;
-
 }
 
-.cs-image {
-  height: 100px;
+.footer-left {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 35%;
+  height: 100%;
 }
 
-.cs-image img{
+.f-left-container {
+  width: 100%;
+}
+
+.footer-image a{
   display: block;
 }
 
-.cs-title {
+  .footer-image {
+  width: 100%;
 }
 
-.cs-title h2 {
+.footer-image img{
+  min-width: 250px;
+  width: 100%;
+  display: block;
+}
+
+/* --footer right-- */
+.footer-right {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  color: #fff;
+}
+
+.fr-container {
+  display: flex;
+  gap: 20px;
+}
+
+.hl-header {
+  padding: 4px 0pc;
+}
+
+.fr-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 100%;
+}
+
+.service-list ul li, .service-list ul li a{
+  list-style: none;
+  text-decoration: none;
+  color: #ffffffa6;
+  padding: 1px;
+}
+
+.service-list ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.service-list ul li a img {
+  height: 17px;
+  filter: invert();
+  opacity: 0.5;
+  margin-right: 10px;
+}
+
+.service-list ul li a:hover, .service-list ul li a img:hover{
+  opacity: 1;
+  color: #fff;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+}
+
+.copyright p {
+  color: #fff;
   text-align: center;
 }
